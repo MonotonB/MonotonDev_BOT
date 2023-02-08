@@ -66,6 +66,12 @@ def callback(call):
         bot.send_message(call.message.chat.id, 'Привет! Что ты хочешь сделать?', reply_markup=keyboard)
     elif call.data == 'github-link':
         bot.send_message(call.message.chat.id, 'GitHub - https://github.com/MonotonB')
+        keyboard = types.InlineKeyboardMarkup()
+        button_link = types.InlineKeyboardButton(text='Страница GitHub', callback_data='github-link')
+        button_back = types.InlineKeyboardButton(text='Вернуться в меню', callback_data='back-to-menu')
+        keyboard.add(button_link, button_back)
+        bot.send_message(call.message.chat.id, 'Чтобы получить ссылку на GitHub нажми на соответсвующую кнопку ниже.',
+                         reply_markup=keyboard)
 
     elif call.data == 'projects-monotondev_bot':
         bot.send_message(call.message.chat.id, 'MonotonDev_BOT - https://github.com/MonotonB/MonotonDev_BOT')
