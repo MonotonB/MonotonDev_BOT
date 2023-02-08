@@ -1,10 +1,13 @@
 import telebot
 import os
 from telebot import types
+from dotenv import load_dotenv
 
-TELEGRAM_BOT_TOKEN = os.getenv(botToken)
+load_dotenv('token.env')
 
-bot = telebot.TeleBot()
+TELEGRAM_BOT_TOKEN = os.getenv('BOTTOKEN')
+
+bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 
 
 @bot.message_handler(content_types=['text'])
