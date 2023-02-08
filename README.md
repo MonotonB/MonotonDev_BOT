@@ -1,5 +1,8 @@
 Hi! This is my Telegram Bot :)
-In line 4, instead of %TOKEN%, specify your token, 
-but keep in mind that this will not mysteriously change the commands and links to yours :)
+In project package create file token.env
+
+In token.env:
+    BOTTOKEN = your bot token
+    e.g. BOTTOKEN = 1234567890:ABCD123ABCD12-abcdabcd-ab1cd2ads3d
 
 Author: https://github.com/MonotonB
