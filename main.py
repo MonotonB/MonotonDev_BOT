@@ -62,7 +62,7 @@ def callback(call):
         bot.send_message(call.message.chat.id, 'GitHub - https://github.com/MonotonB')
 
     elif call.data == 'projects-monotondev_bot':
-        bot.send_message(call.message.chat.id, 'MonotonDev_BOT - ')
+        bot.send_message(call.message.chat.id, 'MonotonDev_BOT - https://github.com/MonotonB/MonotonDev_BOT')
         keyboard = types.InlineKeyboardMarkup()
         button_link = types.InlineKeyboardButton(text='MonotonDev_BOT', callback_data='projects-monotondev_bot')
         button_github = types.InlineKeyboardButton(text='Страница GitHub', callback_data='github')
