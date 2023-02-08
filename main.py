@@ -1,7 +1,10 @@
 import telebot
+import os
 from telebot import types
 
-bot = telebot.TeleBot(%TOKEN%)
+TELEGRAM_BOT_TOKEN = os.getenv(botToken)
+
+bot = telebot.TeleBot()
 
 
 @bot.message_handler(content_types=['text'])
